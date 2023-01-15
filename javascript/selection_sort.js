@@ -1,5 +1,19 @@
 function selectionSort(arr) {
-  // type your code here
+  
+  // iterate through the sorted sub-array
+  for (let i = 0; i < arr.length; i++) {
+    // iterate through the unsorted sub-array that starts right after sorted one
+    for (let j = i; j < arr.length; j++) {
+      // check if the value in the unsorted array is less then the value from sorted array
+      if (arr[i] > arr[j]) {
+        // swap values if they meet condition
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+  }
+  // return sorted array
+  return arr;
+
 }
 
 if (require.main === module) {
